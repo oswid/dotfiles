@@ -1,0 +1,30 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("scripts_my.el"
+ (filename . "~/.config/emacs/scripts_my.el")
+ (front-context-string . "\n(defun reload-d")
+ (rear-context-string)
+ (position . 1))
+("package_my.el"
+ (filename . "~/.config/emacs/package_my.el")
+ (front-context-string . "(require 'packag")
+ (rear-context-string)
+ (position . 1))
+("keybindings_my.el"
+ (filename . "~/.config/emacs/keybindings_my.el")
+ (front-context-string . "(setcdr evil-nor")
+ (rear-context-string)
+ (position . 1))
+("window_my.el"
+ (filename . "~/.config/emacs/window_my.el")
+ (front-context-string . "\n(blink-cursor-m")
+ (rear-context-string)
+ (position . 1))
+("init.el"
+ (filename . "~/.config/emacs/init.el")
+ (front-context-string . " 	\n(load \"/home/")
+ (rear-context-string)
+ (position . 1))
+)

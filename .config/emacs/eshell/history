@@ -1,0 +1,4 @@
+ls 
+python3 --version 
+which python3 
+where python3

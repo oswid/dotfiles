@@ -1,0 +1,157 @@
+#
+# wm independent hotkeys
+#
+ 
+# find or start emacs
+super + 1
+	jumpapp emacs
+
+# find or start firefox
+super + 2
+	jumpapp firefox && numlockx off
+
+
+# find or start terminal
+super + 3
+	jumpapp alacritty && numlockx on
+
+# find or start obsidia
+super + 4
+	jumpapp obsidian
+
+
+# find or start suatra
+super + 5
+	jumpapp zathura
+
+# find or start --------------------------
+super + 6
+	jumpapp emacs
+
+# find or start google
+super + 7
+	jumpapp google-chrome
+
+
+# find or start telegram
+super + 8
+	jumpapp telegram-desktop
+
+
+# find or start ranger 
+super + 9
+	jumpapp  st -e ranger
+
+# find or start krusader
+super + 0
+	jumpapp krusader 
+
+# find or start file manager - ranger
+shift + control + alt + g
+	flameshot gui
+
+#increase volume
+alt + control + shift + h
+	amixer -D pulse sset Master 5%+
+
+
+#decrease volume
+alt + control + shift + i
+	amixer -D pulse sset Master 5%-
+
+#language russian
+Shift_R
+	setxkbmap ru ruchey_cyrillic
+
+#language english
+Control_R
+	setxkbmap ru ruchey_latin
+
+# rofi
+alt + shift + control + j
+	rofi -show run
+
+# terminal emulator
+super + Return
+	gnome-terminal
+
+
+# make sxhkd reload its configuration files:
+super + z
+	pkill -USR1 -x sxhkd
+
+
+# bspwm hotkeys
+#
+
+# restart bspwm
+super + c
+	bspc wm -r
+
+# close and kill
+super + q
+	bspc node -c
+
+# alternate between the tiled and monocle layout
+super + i 
+	bspc desktop -l next
+
+
+
+#
+# state/flags
+#
+
+# set the window state
+super + {k,m,p,v}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+#super + ctrl + {m,x,y,z}
+#	bspc node -g {marked,locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {e, t, n, s}
+	bspc node -f {north, south, west, east}
+
+
+# focus the next/previous window in the current desktop
+#super + '
+#	'bspc node -f next.local.!hidden.window
+
+# focus or send to the given desktop
+super + {_,shift + }{h, a, o, r, y, w, l, f, x}
+	bspc {desktop -f,node -d} {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+#
+# preselect
+#
+
+# preselect the direction
+super + {u,d,b,g}
+	bspc node -p {west,south,north,east}
+
+# cancel the preselection for the focused node
+super + j
+	bspc node -p cancel
+
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+#super + alt + {h,j,k,l}
+#	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+#super + alt + shift + {h,j,k,l}
+#	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+#super + {Left,Down,Up,Right}
+#	bspc node -v {-20 0,0 20,0 -20,20 0}
